@@ -1,0 +1,313 @@
+p{
+	font-size: 30px;
+}
+
+#paragrafo1{
+	font-size: 15px;
+}
+
+.paragrafo2{
+	font-size: 7px;
+	background-color: yellow;
+}
+
+#divExterna p:first-letter{
+	font-size: 60px;
+}
+
+#divExterna p:first-line{
+	text-decoration: underline;
+}
+
+#divExterna p:first-child{
+	background: yellow;	
+}
+
+#divExterna p:last-child{
+	background: red;	
+	color: white;
+}
+
+/*aula Fundo Página */
+.fundo_pagina{
+	background: #00FFFF;
+}
+
+.fundo_elemento{
+	background: rgba(152,152,152,0.10);
+}
+
+#divExterna p:nth-child(3){
+	background: green;	
+	color: white;
+}
+
+/*Aula Background - Imagem de fundo*/
+/*html para fazer funcionar o bottom - o doc tem que ocupar 100% o tamanho da pagina*/
+html{
+	height: 100%;
+}
+.fundo{
+	/*background: url("../img/foto01.jpg") top center no-repeat;*/
+	/*background: url("../img/foto01.jpg") bottom center repeat-x;*/
+	/*background: url("../img/foto01.jpg") middle center repeat-x;*/
+	/*background: url("../img/foto01.jpg") middle center repeat-Y;*/
+	/*background: url("../img/foto01.jpg") top right no-repeat;*/
+	background: url("../img/foto01.jpg") center center repeat-x;
+}
+.transparencia{	
+	opacity: 0.5;
+    filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
+/*Aula Fontes*/
+.fonte_pagina{
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+.fonte01{
+	font-size: 10px;
+}
+.fonte02{
+	color: #00FF77;
+}
+
+.fonte03{
+	font-family:"Courrier New", Courier, monospace;
+	font-size: 20px;
+	color: #FF00FF;
+}
+
+/*Aula Propriedades Text*/
+.espacamento{
+	/*letter-spacing: normal;*/
+	letter-spacing: 20px;
+}
+
+.espacamento_word{
+	/*word-spacing: normal;*/
+	word-spacing: 40px;
+}
+
+.espacamento_textAlign{
+	text-align: center;
+	/*text-align: left;
+	text-align: right;
+	text-align: justify;*/
+}
+
+.espacamento_textDecoration{
+	/* none, underline, overline, line-trough, blink */
+	text-decoration: underline;
+	/*text-decoration: none;
+	text-decoration: overline;
+	text-decoration: line-trough;
+	text-decoration: blink;*/
+}
+
+.espacamento_textIndent{
+	text-indent: 40%
+}
+
+.espacamento_textTransform{
+	/* text-transform: none; */
+	text-transform: uppercase;
+	/*text-transform: capitalize;*/
+	/*text-transform: lowercase;*/
+}
+
+/*Aula Border*/
+.borda01{
+	border: 1px solid black;
+}
+
+.borda02{
+	border-style: dotted;
+	border-width: 3px;
+	border-color: red;
+}
+.borda03{
+	border: none;
+}
+.borda04{
+	border-bottom: 5px dashed green;
+	border-top: 5px outset red;
+}
+.borda05{
+	border-right: 10px solid black;
+	border-left: 5px inset red;
+}
+
+/*Margin e Padding*/
+.auxiliar{
+	float: left;
+	display: block;
+	width: 120px;
+	height: 120px;
+}
+
+.margin01{
+	margin: 10px;
+}
+
+.margin02{
+	margin-left: 30px;
+	margin-right: 30px;
+	margin-top: 30px;
+	margin-bottom: 30px; 
+}
+
+/*o padding se sopma com a altura ou a largura*/
+.padding01{
+	padding: 10px;
+}
+
+.padding02{
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-top: 30px;
+	padding-bottom: 30px; 
+}
+
+/* Aula LIST */
+.lista01{
+	border: 1px solid black;
+	/*list-style-image: url("img/seta.jpg");*/
+	/*list-style-position: inside;*/
+	list-style-position: outside;
+	list-style-type: none;
+	/*none, decimal, list, square, armenian, circle, cjk-ideographic, decimal-leading-zero, disc, georgian, hebrew, hiragana, hiragana-iroha, katakana, katakana-iroha, lower-alpha, lower-greek, lower-latin, lower-roman, square, upper-alpha, upper-latin, upper-roman*/
+	padding-left: 0px;
+	margin: 0px;
+}
+
+/*Menus com Listas e Links*/
+.elementoUl{
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+    background: #8B668B;
+    width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    text-align: center;
+}
+
+.elementoUl > li{
+    /*float: left;*/
+    display: inline;    
+    margin: 8px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.elementoUl a{
+    color: white;
+    text-decoration: none;
+    padding: 8px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.elementoUl a:hover{
+    background: black;
+    text-decoration: underline;
+}
+
+.elementoUl a:active{
+    background: red;
+}
+
+.elementoUl a:visited{
+    background: black;
+    color: yellow;
+}
+
+/*Tabelas*/
+.tabela01{
+    width: 50%;
+    border-collapse: collapse;
+    border: 1px solid black;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tabela01 td{
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.tabela01 .trPar{
+    background: gray;
+}
+
+.tabela01 .trImpar{
+    background: gray;
+}
+
+.tabela01 tr:hover{
+    background: grayscale;
+}
+
+.tabela01 thead tr:hover{
+    background: none;
+}
+
+.tabela01 thead tr{
+    background: red;
+    color: white;
+}
+
+/* Formulário e Formatação */
+#frmContato{
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid gray;
+    padding: 10px;   
+    background: #DCDCDC;
+}
+
+#frmContato label{
+    display: block;
+    margin-bottom: 15px;
+}
+
+#frmContato textarea{
+    width: 100%;    
+    margin-bottom: 15px;
+    height: 180px;
+    padding: 7px;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+#frmContato textarea:focus{
+    border:1px dashed blue;
+}
+
+#frmContato label input{
+    width: 350px;
+    padding: 7px;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+#frmContato label input:hover{
+    border:1px solid blue;
+}
+
+.form_botao{
+    border-radius: 5px;
+    border: 1px solid gray;
+    color: #ADD8E6;
+    background: #4682B4;
+    padding: 10px;
+}
+
+.form_botao:hover{
+    color: #4682B4;
+    background: #ADD8E6;
+}
