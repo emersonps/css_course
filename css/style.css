@@ -1,5 +1,6 @@
+/*Pseudo-elementos DOM - Document Object Model*/
 p{
-	font-size: 30px;
+	font-size: 14px;
 }
 
 #paragrafo1{
@@ -46,6 +47,7 @@ p{
 /*html para fazer funcionar o bottom - o doc tem que ocupar 100% o tamanho da pagina*/
 html{
 	height: 100%;
+    width: 100%;
 }
 .fundo{
 	/*background: url("../img/foto01.jpg") top center no-repeat;*/
@@ -310,4 +312,101 @@ html{
 .form_botao:hover{
     color: #4682B4;
     background: #ADD8E6;
+}
+
+/*CSS Avançado - Heranças*/
+.aula17_classe01, .aula17_classe02{
+    background: yellow;
+    width: 150px;
+    height: 150px;
+    float: left;
+    border: 1px solid black;
+    display: block;
+    margin: 4px;
+}
+
+.aula17_classe02{
+    background: gray;
+}
+
+.aula17_classe01 div{ /*Divs internas - dentro da aula17_classe01*/
+    font-size: 14px;
+    color: red;
+}
+
+.aula17_classe01 > div{/*Divs de 1º nivel*/
+    color: blue;
+    font-size: 16px;
+}
+
+.aula17_classe01 .aula17_classe02{
+    background: red;
+    color: white;
+}
+
+.teste01 > div{
+    color: blue;
+}
+
+.teste01 div{
+    color:red;
+}
+
+/*Divs*/
+.div_container{
+    width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+    background: gray;
+}
+
+.div_container .coluna{
+    background: red;
+    width: 312px;
+    float: left;
+    margin-left: 1px;
+}
+
+.div_clearFloat{
+    clear: both;
+}
+
+.div_container .coluna:last-child{
+    float: right;   
+}
+
+.div_displayBlock, .div_displayInline{
+    border: 1px solid black;
+    margin-top: 10px;
+    margin-bottom: 10px;   
+    display: block;
+}
+
+.div_displayInline{
+    display: inline;
+}
+
+/* POSITION */
+.aulaModalBody{
+    margin:0px;
+    padding: 0px;
+}
+
+.aulaModal{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: url("../img/fotoModal.png");
+    padding-top: 20%;
+}
+
+.aulaModalConteudo{
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    height: 200px;
+    background: white;
+    border-radius: 5px;
+    border: 1px solid black;
+    padding: 10px;
 }
