@@ -410,3 +410,276 @@ html{
     border: 1px solid black;
     padding: 10px;
 }
+
+/*Calc Div*/
+.calculator01{
+    width: 500px;
+    height: 300px;
+    background: yellow;
+    border: 2px solid red;
+    position: absolute;
+
+    /*centralizar horizontal*/
+    /*
+    left: 50%;
+    margin-left: -250;
+    ou: */
+    left: calc(50% - 250px);
+    left: -moz-calc(50% - 250px);
+    left: -webkit-calc(50% - 250px);
+
+    /*centralizar vertical*/
+    /*
+    top: 50%;
+    margin-top: 150px;
+    ou: */
+    top: calc(50% - 150px);
+    top: -web-kit-calc(50% - 150px);
+    top: -moz-calc(50% - 150px);   
+}
+
+.calculator02{
+    width: 400px;
+    height: 200px;
+    background: green;
+    border: 2px solid blue;
+    position: absolute;
+
+    /*centralizar horizontal*/
+    /*
+    left: 50%;
+    margin-left: -250;
+    ou: */
+    left: calc(50% - 200px);
+    left: -moz-calc(50% - 200px);
+    left: -webkit-calc(50% - 200px);
+
+    /*centralizar vertical*/
+    /*
+    top: 50%;
+    margin-top: 150px;
+    ou: */
+    top: calc(50% - 100px);
+    top: -web-kit-calc(50% - 100px);
+    top: -moz-calc(50% - 100px);       
+}
+
+/*Recorte_de Elementos - Clip*/
+.clip01{
+    position: absolute;
+    background: yellow;
+    width: 400px;
+    border: 1px solid red;
+    clip: rect(50px 360px 240px 80px);/*top right bottom left */
+}
+.clip02{
+    position: absolute;
+    background: yellow;
+    clip: rect(50px 360px 194px 80px);/*top right bottom left */
+}
+
+/*Box Shadow e Text Shadow*/
+/*deslocamento horizontal, deslocamento vertical, blur, cor*/
+h3.sombraTexto{
+    -moz-text-shadow: 5px 5px 10px red, -5px -5px 5px yellow;
+    -webkit-text-shadow: 5px 5px 10px red, -5px -5px 5px yellow;
+    text-shadow: 5px 5px 10px red, -5px -5px 5px yellow;
+}
+
+div.sombraCaixa{
+    width: 150px;
+    padding: 10px;
+    border: 1px solid gray ;
+
+    -moz-box-shadow: 5px 5px 0px black, -5px -5px 30px green;
+    -webkit-box-shadow: 5px 5px 0px black, -5px -5px 30px green;
+    box-shadow: 5px 5px 0px black, -5px -5px 30px green;
+}
+
+/*Border Radius*/
+/* 
+    border-radius:10px;
+*/
+.borderLogo, .borderLogo2{
+    width: 300px;  
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: center;
+    color: white;
+    background: green;
+    position: absolute;
+    left: calc(50% - 150px);
+    font-size: 30px;
+    font-family: Arial;
+    box-shadow: 0px 0px 5px black;
+    text-shadow: 0px 0px 5px black;
+
+    /*border-top-right-radius*/
+    /*border-bottom-left-radius*/
+    border-radius: 60px;   
+    border-top-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+/*CSS Avançado*/
+
+/*{'a' pode ser qualquer elemento}
+a[target] = seleciona todos os links que possuam o atributo 'target'
+a[target=_blank] = seleciona todos os links que possuem o atributo target com o valor _blank
+a[atributo~=titulo] = seleciona todos os links que possuem no atributo "title" a palavra "site"
+a[atributo^='https'] = seleciona todos os links que iniciam com https
+p:empty = seleciona todas as tags p que não tenham conteúdo
+input:disabled = seleciona os elementos que estejam desabilitados
+input:checked = seleciona os elementos que estejam marcados*/
+.seletorAvancado01 a[target]{
+    color: red;
+}
+
+.seletorAvancado01 a[target="_blank"]{
+    background: black;
+}
+
+.seletorAvancado01 a[title~="CursoCSSBásico"]{
+    font-size: 18px;
+    border: 1px solid red;
+    padding: 10px;
+}
+
+.seletorAvancado01 a[href^="http"]{
+    background: red;
+    color: white;    
+    padding: 10px;
+}
+
+.seletorAvancado01 a:empty{
+    width: 50px;
+    height: 20px;
+    background: yellow;
+    display: block;
+    margin: 5px;
+    border: 1px solid red;
+}
+
+.seletorAvancado01 input:disabled{
+    background: gray;
+    padding: 8px;
+    border-radius: 10px;
+}
+
+.seletorAvancado01 input:checked{
+    display: block;
+    height: 20px;
+    width: 20px;
+}
+
+/*Animation*/
+/*
+    transition-property*,
+    transition-duration*,
+    transition-timing-function,
+    transition-delay.
+
+Ex.: div{transition:border-color:1s linear 0.1s;}
+(linear,ease, ease-in, ease-out e ease-in-out)
+*/
+.borderLogo2{
+    /*transition: border-radius 2s ease 0.1s;*/
+    transition: border-radius 2s ease-out 0.1s, 
+                background 2s ease-out 0.1s, color 2s, 
+                font-size 0.1s, font-size 2s ease-out 0.1s;
+}
+
+.borderLogo2:hover{
+    border-radius: 60px;
+    background: red;
+    color: yellow;
+    font-size: 50;
+}
+
+/*Animation 2*/
+/*
+Keyframes, substituto da animação em flash, algo linear
+
+@keyframes nomeAnimacao{
+    0% {propriedades}
+    10% {propriedades}
+    100% {propriedades}
+}
+
+Ex:
+div{
+    animation:
+        nomeAnimacao
+        5s
+        easy
+        1s
+        infinite - repeticao
+        alternate
+}
+*/
+@Keyframes minhaAnimacao{
+    0%{
+        background: black;
+        width: 100px;
+        position: absolute;
+        top: 5px;
+        left: 5px;
+    }
+    25%{
+        background: blue;
+        width: 150px;
+        position: absolute;
+        top: 400px;
+    }
+    50%{
+        background: red;
+        top: 0px;
+    }
+    75%{
+        background: yellow;
+        left: 200px;
+    }
+    100%{
+        background: green;
+        top: 0px;
+        left: 0px;
+    }
+}
+
+.animation2 div{
+    border: 5px solid red;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    animation: minhaAnimacao 5s ease infinite alternate;
+}
+
+/*Font Face*/
+/*
+    Sintaxe:
+    @font-face{
+        font-family: "nomedafonte";
+        src: url('caminho/fonte.otf'); eot, otf ou ttf
+    }
+    IE - aceita somente fonte no formato EOT (precisa de um conversor para converter o formato da fonte)
+*/
+
+@font-face{
+    font-family: "minhafonte";
+    src: url("../font/Roboto_Condensed/RobotoCondensed-Bold.ttf");
+}
+
+@font-face{
+    font-family: "minhafonte2";
+    src: url("../font/Love_Ya_Like_A_Sister/LoveYaLikeASister.ttf");
+}
+
+.fontFace p{
+    font-size: 18px;
+    font-family: minhafonte;
+}
+.fontFace h1{
+    font-size: 30px;
+    font-family: minhafonte2;
+}
+
