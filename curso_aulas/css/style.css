@@ -682,4 +682,162 @@ div{
     font-size: 30px;
     font-family: minhafonte2;
 }
+/*Transforms 2D*/
+/*
+Scale: aumenta ou diminui porporcionalmente um elemento
+Skew: modifica os ângulos de um elemento
+Translation: move o elemento nos eixos X e/ou Y
+Rotate: rotaciona um elemento utilizando ângulos
+    Exemplo:
+    .imagem{
+        -webkit-transform:scale(0.5);
+        -moz-transform:scale(0.5);
+        -o-transform:scale(0.5);
+    }
+*/
+.transf2d img{
+    position: absolute;
+    left: calc(50% - 200px);
+
+    /*
+    -webkit-transform: scale(0.5);
+    -moz-transform: scale(0.5);
+    -o-transform: scale(0.5);
+    */
+    transform: translate(0px, 0px);
+    /*
+    transform: scale(0.5);
+    transform: rotate(0deg);
+    transition: transform 1s linear 0.1s;
+    */
+}
+.transf2d img:hover{
+    /*transform: scale(1);*/
+    transform: translate(50px, 50px);
+    
+}
+
+/*Transform 3D*/
+/*
+Sintaxe:
+    transform-rotatY(0deg);
+    transform-rotatX(0deg);
+    transform-rotatZ(0deg);
+    
+    PERSPECTIVA:
+    transform: perspectiva(600); - distancia que vemos o objeto
+    
+    PONTO DE FUGA:
+    perspective-origin: modifica o "centro do objeto", ou seja modifica os eixos X e Y.
+*/
+
+.transf3d #div01, .transf3d #div02{
+    -webkit-perspective: 600px;
+    display: block;
+    width: 240px;
+    padding:10px;
+    float: left;
+    margin: 20px;
+}
+
+.transf3d #div01 #img01{
+    -webkit-transform: rotateY(0deg);
+    -webkit-transform: rotateX(40deg);
+    transition: -webkit-transform 1s linear 0.1s;
+}
+.transf3d #div02 #img02{
+    -webkit-transform: rotateY(20deg);
+    -webkit-transform: rotateZ(10deg);
+    transition: -webkit-transform 1s linear 0.1s;
+}
+
+.transf3d #div01 #img01:hover{
+    -webkit-transform: rotateY(90deg);
+    -webkit-transform: rotateX(250deg);
+}
+.transf3d #div02 #img02:hover{
+    -webkit-transform: rotateY(200deg);
+    -webkit-transform: rotateZ(150deg);
+}
+
+/*Background CSS3*/
+/*
+background-size: 100% 100%;
+background-origin: content-box, padding-box ou border-box //permite dizer em que região de nosso elemento o background será posicionado;
+background-image:
+    url(imagem1.jpg);
+    url(imagem2.jpg);
+
+background-repeat;
+    no-repeat;
+    repeat;
+*/
+
+.backCss3 #div01{
+    position: absolute;
+    width: 500px;
+    height: 400px;
+    padding: 40px;
+    border: 10px solid red;
+    margin: 20px;
+    left: calc(50% - 250px);
+    
+    background-image: url("../img/fotoModal.png"), url("../img/foto01.jpg");
+    background-repeat: no-repeat, no-repeat;
+    /*background-repeat: no-repeat;*/
+    background-position: left, right;
+
+    /*
+    background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -webit-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    */
+    
+    /*  content-box: imagem ocupa somente espaço ocupado pelo conteúdo do box
+        border-box: A imagem ocupa parte da borda do box
+        padding-box: A imagem ocupa somente espaço do box
+    */        
+    /*background-origin: padding-box;*/
+    /*background-origin: content-box;
+    background-origin: border-box;
+    background-size: 100% 100%;
+    */
+}
+
+.backCss3 #div01:hover{
+    position: absolute;
+    width: 500px;
+    height: 400px;
+    padding: 40px;
+    border: 10px solid red;
+    margin: 20px;
+    left: calc(50% - 250px);
+    
+    transition: background-image 3s ease-out 0.8s, 
+            background-repeat 3s ease-out 0.8s, 
+            background-position 3s, ease-out 0.8s;
+
+    background-image: url("../img/fotoModal.png"), url("../img/foto01.jpg");
+    background-repeat: no-repeat, no-repeat;
+    /*background-repeat: no-repeat;*/
+    background-position: center, center;
+
+    /*
+    background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -webit-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    */
+    
+    /*  content-box: imagem ocupa somente espaço ocupado pelo conteúdo do box
+        border-box: A imagem ocupa parte da borda do box
+        padding-box: A imagem ocupa somente espaço do box
+    */        
+    /*background-origin: padding-box;*/
+    /*background-origin: content-box;
+    background-origin: border-box;
+    background-size: 100% 100%;
+    */
+}
 
