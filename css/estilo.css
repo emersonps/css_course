@@ -15,6 +15,16 @@ div{
 	width: 100%;
 }
 
+p{
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+a:link{
+	color: #0059B2;
+	text-decoration: none;
+}
+
 /*Estrutura do Layout*/
 .container{
 	display: block;
@@ -40,9 +50,38 @@ div{
 	float: right;
 }
 
+.coluna_areaNoticia{
+	float: left;
+	width: 456px;
+}
+
+.coluna_areaProdutos{
+	float: right;
+	width: 456px;
+}
+
+.coluna_produto01{
+	float: left;
+	width: 220px;
+	margin-right: 10px;
+	box-shadow: 1px 1px 8px black, -1px -1px 8px #BCBCBC;
+	-webkit-box-shadow: 1px 1px 8px black, -1px -1px 8px #BCBCBC;
+	-moz-box-shadow: 1px 1px 8px black, -1px -1px 8px #BCBCBC;
+	-o-box-shadow: 1px 1px 8px black, -1px -1px 8px #BCBCBC;
+}
+
+.coluna_produto02{
+	float: left;
+	width: 220px;
+	box-shadow: 1px 1px 8px black, -1px -1px 8px #BCBCBC;
+	-webkit-box-shadow: 1px 1px 8px black, -1px -1px 8px #BCBCBC;
+	-moz-box-shadow: 1px 1px 8px black, -1px -1px 8px #BCBCBC;
+	-o-box-shadow: 1px 1px 8px black, -1px -1px 8px #BCBCBC;
+}
+
 /*Definições de Menu*/
 .container_menu{
-	background: url(../img/bg_menu.jpg) top repeat-x;
+	background: url(../img/bg_menu.png) top repeat-x;
 	box-shadow: 5px 5px 5px black;
 	-webkit-box-shadow: 5px 5px 5px black;
 	-moz-box-shadow: 5px 5px 5px black;
@@ -78,6 +117,11 @@ div{
 	background: #b78714;
 }
 
+.rodape{
+	padding-top: 20px;
+	padding-bottom: 20px;
+	text-align: center;
+}
 
 /*Definições do Slider*/
 #containerSlider{
@@ -97,13 +141,72 @@ div{
 	margin-left: 3px;
 }
 
+.iconeInicial{
+	width: 221px;
+	float: left;
+	margin: 8px;
+}
+
+.iconeInicial:first-child{
+	margin-left: 0px;
+}
+
+.iconeInicial:last-child{
+	margin-right: 0px;
+}
+
+.icone, .tituloIcone{
+	text-align: center;	
+	padding-top: 10px;
+	padding-bottom: 5px;
+
+}
+
+
 /*Classes de Uso Geral*/
 .bordaArredondada{
-	border-radius: 8px;
-	-webkit-border-radius: 8px;
-	-moz-border-radius: 8px;
-	-o-border-radius: 8px;
+	border-radius: 6px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	-o-border-radius: 6px;
 }
+
+.divBordaCinzaVazada{
+	border: 1px solid gray;
+}
+
+.efeitoHover{
+	transition: background 0.4s ease-out 0.2s,
+				color 0.4s ease-out 0.2s;
+	-webkit-transition: background 0.4s ease-out 0.2s,
+				color 0.4s ease-out 0.2s;
+	-moz-transition: background 0.4s ease-out 0.2s,
+				color 0.4s ease-out 0.2s;
+	-o-transition: background 0.4s ease-out 0.2s,
+				color 0.4s ease-out 0.2s;
+}
+
+.efeitoHover:hover{
+	/*background: url(../img/bg_branco_transp.png);	*/
+	background: white;
+}
+
+.marginInterna{
+	margin: 6px;
+	width: 97%;
+}
+
+.fundoBrancoTransp{
+	background: url(../img/bg_branco_transp.png);
+}
+
+.titulo{
+	font-size: 23px;
+	padding-bottom: 10px;
+	border-bottom: 1px dashed #BCBCBC;
+
+}
+
 
 /*Espaçamento Inferior*/
 .ei{
