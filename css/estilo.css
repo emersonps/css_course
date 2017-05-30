@@ -11,7 +11,7 @@ body{
 }
 
 div{
-	display: table;
+/*	display: table;*/
 	width: 100%;
 }
 
@@ -211,4 +211,78 @@ a:link{
 /*Espaçamento Inferior*/
 .ei{
 	margin-bottom: 22px;
+}
+
+
+/*Slider*/
+
+#wrapper {
+	width: 925px;
+	height: 295px;
+	margin: 0 0 0 -464px; /*Metade da largura e da altura*/
+	overflow: hidden;
+	position: relative;
+	top: 50%;
+	left: 50%;
+}
+#images {
+	width: 925px;
+	height: 295px;
+}
+#images img {
+	display: block;
+	float: left;
+}
+#timer,
+#captions {
+	background: rgba( 0, 0, 0, 0.5 );
+	width: 925px;
+	height: 50px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+#timer {
+	background: rgba( 200, 0, 0, 0.5 );
+}
+#captions .carousel > div {
+	color: #fff;
+	font-size: 22px;
+	font-weight: bold;
+	line-height: 52px;
+	text-transform: uppercase;
+	text-indent: 50px;
+	width: 700px;
+	height: 50px;
+	float: left;
+}
+.pager {
+	line-height: 22px;
+	padding: 16px 50px 0 0;
+	float: right;
+}
+.pager a {
+	border: 1px solid #fff;
+	border-radius: 10px;
+	display: none;
+	width: 10px;
+	height: 10px;
+	margin: 0 3px;
+}
+.pager a:hover {
+	background: rgba( 255, 255, 255, 0.3 );
+}
+.pager a.selected {
+	background: #fff;
+}
+.cod .pager .p1,
+.cod .pager .p2,
+.cod .pager .p3,
+.gta .pager .p4,
+.gta .pager .p5,
+.gta .pager .p6,
+.mgs .pager .p7,
+.mgs .pager .p8,
+.mgs .pager .p9 {
+	display: inline-block;
 }

@@ -4,7 +4,11 @@
 		<title>Projeto Prático - Hotel de Praia</title>
 		<link rel="stylesheet" type="text/css" href="css/estilo.css">
 		<link href="css/font-awesome.min.css" rel="stylesheet">
+		<script language="javascript" src="js/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="js/jquery.carouFredSel.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
 		<meta charset="utf-8">
+
 	</head>
 	<body>
 		<div class="container">
@@ -28,10 +32,32 @@
 			
 			<!-- Slider -->
 			<div class="row ei">
-				<div id="containerSlider">
-					<img src="img/slider/img02.jpg" width="925px" height="295px" alt="Sacada - Slider 01" />
+				<div class="containerSlider">
+					<div id="wrapper">
+						<div id="images">
+							<div class="carousel">
+								<img src="img/slider/img01.jpg" width="925px" height="295px" alt="Slider 01" />
+								<img src="img/slider/img02.jpg" width="925px" height="295px" alt="Slider 02" />
+								<img src="img/slider/img03.jpg" width="925px" height="295px" alt="Slider 03" />
+								<img src="img/slider/img04.jpg" width="925px" height="295px" alt="Slider 04" />
+							</div>
+						</div>
+						<div id="timer"></div>
+						<div id="captions">
+							<div class="carousel">
+								<div class="cod">Foto 01
+									<div class="pager"></div>
+								</div>
+								<div class="gta">Foto 03
+									<div class="pager"></div>
+								</div>
+								<div class="mgs">Foto 02
+									<div class="pager"></div>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
-
 			</div>
 			<!-- //Slider -->
 
