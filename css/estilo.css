@@ -121,6 +121,7 @@ a:link{
 	padding-top: 20px;
 	padding-bottom: 20px;
 	text-align: center;
+	font-weight: bold;
 }
 
 /*Definições do Slider*/
@@ -204,15 +205,38 @@ a:link{
 	font-size: 23px;
 	padding-bottom: 10px;
 	border-bottom: 1px dashed #BCBCBC;
-
 }
 
+h1.titulo{
+	border-bottom: 1px dashed #BCBCBC
+}
 
 /*Espaçamento Inferior*/
 .ei{
 	margin-bottom: 22px;
 }
 
+/*Página interna*/
+.thumbnail, .thumbnail-right{
+	padding: 5px;
+	border: 1px solid gray;
+}
+
+.thumbnail{
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+
+.thumbnail-right{
+	float: right;
+	margin-left: 10px;
+	margin-bottom: 10px;
+}
+
+.paginaInterna p{
+	text-align: justify;
+}
 
 /*Slider*/
 
